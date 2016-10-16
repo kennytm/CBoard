@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+<defs>
+<radialGradient id="bg" cx="0.25" cy="0.25" r="0.75">
+    <stop offset="0%" stop-color="#ffe708"/>
+    <stop offset="100%" stop-color="#ffd96d"/>
+</radialGradient>
+<filter id="f1">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
+    <feSpecularLighting in="blur" result="emboss" surfaceScale="0.5" specularConstant="0.75" specularExponent="10" lighting-color="#fff">
+        <fePointLight x="-1" y="-1" z="20"/>
+    </feSpecularLighting>
+    <feComposite in="emboss" in2="SourceAlpha" operator="in" result="emboss-2"/>
+    <feComposite in="emboss-2" in2="SourceGraphic" operator="atop" result="emboss-3"/>
+    <feColorMatrix in="emboss-3" result="colored" type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0.125
+        0 0 1 0 0.5
+        0 0 0 1 0
+    "/>
+
+    <feColorMatrix in="SourceAlpha" result="shadow-color" type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 0.15 0
+    "/>
+    <feGaussianBlur in="shadow-color" stdDeviation="0.25" result="shadow-blur"/>
+    <feOffset in="shadow-blur" result="shadow" dx="0.15" dy="0.15"/>
+    <feComposite in="colored" in2="shadow" operator="over"/>
+</filter>
+</defs>
+<g transform="scale(25) translate(0.24 0.24)">
+<rect x="0" y="0" width="20" height="20" rx="4" ry="4" fill="url(#bg)"/>
+<g filter="url(#f1)">
+<path d="
+    M 4.5 18
+    H 4
+    A 2 2 0 0 1 2 16
+    V 4
+    A 2 2 0 0 1 4 2
+    H 12
+
+    M 15.5 2
+    H 16
+    A 2 2 0 0 1 18 4
+    V 8
+    A 2 2 0 0 1 16 10
+    H 12
+    H 16
+    A 2 2 0 0 1 18 12
+    V 16
+    A 2 2 0 0 1 16 18
+    H 8
+" fill="none" stroke="black" stroke-width="2"/>
+<path d="
+    M 12 1
+    L 12.5 2
+    L 12 3
+    L 11.5 2
+    Z
+
+    M 4.5 17
+    H 5
+    L 4.5 18
+    L 5 19
+    H 4.5
+    L 4 18
+    Z
+
+    M 8 17
+    L 7.5 18
+    L 8 19
+    L 8.5 18
+    Z
+
+    M 12 9
+    L 11 11
+    H 12
+    L 13 10
+    Z
+
+    M 15 1
+    L 15.5 2
+    L 15 3
+    H 16
+    L 15.5 1
+    Z
+
+    M 12.5 1
+    H 14.5
+    L 15 2
+    L 7 18
+    L 7.5 19
+    H 5.5
+    L 5 18
+    L 13 2
+    Z
+" fill="black"/>
+</g>
+</g>
+</svg>

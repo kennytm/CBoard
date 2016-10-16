@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CBoard_App" customModuleProvider="target"/>
+        <menu systemMenu="main" id="3eu-7O-7e3">
+            <items>
+                <menuItem title="Application" id="FDa-aS-zNu">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Application" id="DrL-gA-FWj">
+                        <items>
+                            <menuItem title="About Application" id="lBc-Rp-qPD">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="AXu-n8-ngU"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="GzG-T3-ZG0"/>
+                            <menuItem title="Hide Application" keyEquivalent="h" id="48k-cF-rrI">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="Lrg-74-GFe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="FU0-ac-ONp">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="Kml-JG-Hqg"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="uPx-Sz-wer">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="IcD-f7-3IP"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="MmV-j3-AOk"/>
+                            <menuItem title="Quit Application" keyEquivalent="q" id="YTM-sf-4Vj">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="A0u-fI-oMA"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-248" y="-49"/>
+        </menu>
+        <window title="CBoard" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="SD4-mc-10I">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="131" y="158" width="440" height="446"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="DV8-Sy-ycQ">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="446"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="uO4-dp-Rar">
+                        <rect key="frame" x="20" y="322" width="80" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="5GI-MS-T8c"/>
+                            <constraint firstAttribute="height" constant="40" id="Sqz-ca-r0s"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="Step1" id="V63-8I-ktn"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K2B-I9-gad">
+                        <rect key="frame" x="8" y="402" width="424" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="420" id="R6F-T6-kXx"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" allowsEditingTextAttributes="YES" id="Gmc-HY-YJa">
+                            <font key="font" metaFont="systemBold"/>
+                            <string key="title">CBoard is a notification center widget. 
+Please enable it from the notification center.</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="GWR-Xp-lke">
+                        <rect key="frame" x="180" y="202" width="240" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="QCT-pq-2ca"/>
+                            <constraint firstAttribute="height" constant="100" id="hOB-Op-BbX"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="Step2" id="0bB-di-mbj"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0PW-pu-gXe">
+                        <rect key="frame" x="118" y="325" width="151" height="34"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="NG8-3l-1kD">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Step 1:
+Open notification center</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-sh-Q9i">
+                        <rect key="frame" x="88" y="235" width="74" height="34"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="MKn-Wg-o2d">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Step 2:
+Click “Edit”</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Zo-mF-kHy">
+                        <rect key="frame" x="118" y="165" width="141" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Step 3: Enable CBoard" id="Okq-2e-gTd">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="0JV-mb-Mga">
+                        <rect key="frame" x="20" y="20" width="400" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="gMG-kY-GZc"/>
+                            <constraint firstAttribute="width" constant="400" id="kYz-HR-KhS"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="Step3" id="baP-tj-aMF"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GWR-Xp-lke" secondAttribute="trailing" constant="20" id="0lP-fW-DGx"/>
+                    <constraint firstItem="0PW-pu-gXe" firstAttribute="centerY" secondItem="uO4-dp-Rar" secondAttribute="centerY" id="66k-tz-yCk"/>
+                    <constraint firstItem="GWR-Xp-lke" firstAttribute="top" secondItem="uO4-dp-Rar" secondAttribute="bottom" constant="20" id="6fZ-SP-kfp"/>
+                    <constraint firstItem="0JV-mb-Mga" firstAttribute="leading" secondItem="DV8-Sy-ycQ" secondAttribute="leading" constant="20" id="8IO-7v-dpL"/>
+                    <constraint firstAttribute="bottom" secondItem="0JV-mb-Mga" secondAttribute="bottom" constant="20" id="K2f-dh-nCC"/>
+                    <constraint firstItem="GWR-Xp-lke" firstAttribute="leading" secondItem="Z08-sh-Q9i" secondAttribute="trailing" constant="20" id="RSa-st-NAj"/>
+                    <constraint firstItem="K2B-I9-gad" firstAttribute="leading" secondItem="DV8-Sy-ycQ" secondAttribute="leading" constant="10" id="SDe-TT-pOy"/>
+                    <constraint firstItem="K2B-I9-gad" firstAttribute="top" secondItem="DV8-Sy-ycQ" secondAttribute="top" constant="10" id="TrC-0D-tGw"/>
+                    <constraint firstItem="3Zo-mF-kHy" firstAttribute="top" secondItem="GWR-Xp-lke" secondAttribute="bottom" constant="20" id="Urs-fA-Ef1"/>
+                    <constraint firstItem="0PW-pu-gXe" firstAttribute="leading" secondItem="uO4-dp-Rar" secondAttribute="trailing" constant="20" id="bT9-zc-dET"/>
+                    <constraint firstItem="uO4-dp-Rar" firstAttribute="leading" secondItem="DV8-Sy-ycQ" secondAttribute="leading" constant="20" id="gG8-DJ-Eiz"/>
+                    <constraint firstItem="0JV-mb-Mga" firstAttribute="top" secondItem="3Zo-mF-kHy" secondAttribute="bottom" constant="5" id="jwV-u3-GGD"/>
+                    <constraint firstItem="3Zo-mF-kHy" firstAttribute="leading" secondItem="0PW-pu-gXe" secondAttribute="leading" id="nwP-O9-dwC"/>
+                    <constraint firstAttribute="trailing" secondItem="K2B-I9-gad" secondAttribute="trailing" constant="10" id="rLK-SU-Rwl"/>
+                    <constraint firstItem="uO4-dp-Rar" firstAttribute="top" secondItem="K2B-I9-gad" secondAttribute="bottom" constant="40" id="rRC-9g-ZV8"/>
+                    <constraint firstItem="GWR-Xp-lke" firstAttribute="centerY" secondItem="Z08-sh-Q9i" secondAttribute="centerY" id="zTU-Va-h9q"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-153" y="495"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="Step1" width="160" height="80"/>
+        <image name="Step2" width="480" height="200"/>
+        <image name="Step3" width="1200" height="420"/>
+    </resources>
+</document>
